@@ -1,21 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 body {
-	font-family: "PT Sans", "Arial", serif;
-	font-size: 14px;
-	line-height: 26px;
-	color: #333333;
-	font-weight: normal;
+  font-family: "PT Sans", "Arial", serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: #333333;
+  font-weight: normal;
+  min-width: 1200px;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 h1 {
-	font-size: 21px;
-	line-height: 26px;
-	color: #000000;
-	font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: bold;
 }
 
 h2 {
-	font-size: 21px;
-	line-height: 26px;
-	color: #000000;
-	font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  margin-left: 531px;
+}
+  
+.main-navigation {
+  min-height: 56px;
+  margin: 0 auto;
+}
+
+.intro {
+  min-height: 508px;
+  text-align: center;
+  padding: 90px;
+  background-color: #2e485f;
+  background-image: url("../img/index/intro-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.reason-title {
+  text-align: center;
+  min-height: 216px;
+  width: 576px;
+  margin: 0 auto;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.reason-row-descr {
+  min-height: 256px;
+  width: 400px;
+  text-align: center;
+  background-color: #81b3d2;
+}
+
+.reason1 {
+  background-image: url("../img/index/reason1.jpg");
+  background-repeat: no-repeat;
+  min-height: 256px;
+  width: 800px;
+}
+
+.reason2 {
+  background-image: url("../img/index/reason2.jpg");
+  background-repeat: no-repeat;
+  min-height: 256px;
+  width: 800px;
+}
+
+.recommend-item {
+  min-height: 330px;
+  width: 400px;
+  text-align: center;
+}
+
+.reason-item {
+  min-height: 256px;
+  width: 400px;
+  text-align: center;
+  background-color: #eeeeee;
+}
+
+.search-descr {
+  min-height: 291px;
+  width: 568px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.search-btn {
+  min-height: 86px;
+  width: 568px;
+  background-color: #766357;
+  text-align: center;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  margin-left: -284px;
+}
+
+.search-form {
+  min-height: 593px;
+  background-image: url("../img/index/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.search-form form {
+  min-height: 395px;
+  width: 568px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.filter {
+  color: #ffffff;
+  background-image: url("../img/hotels/filter-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 217px;
+}
+
+.filter-infrastructure h2,
+.filter-housing h2 {
+  color: #ffffff;
+}
+
+.filter-infrastructure {
+  width: 254px;
+  margin-left: 73px;
+}
+
+.filter-housing {
+  width: 254px;
+}
+
+.cost-range {
+  width: 318px;
+  min-height: 36px;
+  border: 2px solid #ffffff;
+  margin-right: 73px;
+}
+
+.cost-range-min,
+.cost-range-max {
+  width: 157px;
+  display: inline-block;
+  text-align: center;
+  margin: 2px 0;
+}
+
+.cost-range-min {
+  border-right: 2px solid #ffffff;
+}
+
+.sort {
+  min-height: 87px;
+  padding-left: 73px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sort * {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 35px;/*откорректировать*/
+}
+
+.result-item {
+  min-height: 152px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.result-item img {
+  margin-left: 73px;
+  margin-top: 30px;
+}
+
+.result-item-dscr {
+  margin-left: 30px;
+  margin-top: 22px;
+}
+
+.main-footer {
+  width: 1200px;
+}
+
+.transparency {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-index {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-visitsedona {
+  min-height: 60px;
+  width: 240px;
+  text-align: center;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.footer-social {
+  min-height: 60px;
+  width: 400px;
+  text-align: center;
+}
+
+.footer-copyright {
+  min-height: 60px;
+  width: 240px;
+  text-align: center;
+  margin-right: 80px;
+}
+
+.footer-copyright p {
+  display: inline-block;
 }
