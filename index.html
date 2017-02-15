@@ -3,34 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <header class="main-header">
-        <div class="logo">
-          <a><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
-        </div>
         <nav class="main-navigation">
-          <ul>
-            <li>
+          <div class="logo">
+            <a><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
+          </div>
+          <ul class="clearfix">
+            <li class="main-navigation-left">
               <a href="#">Информация</a>
             </li>
-            <li>
+            <li class="main-navigation-left">
               <a href="#">Фото и видео</a>
             </li>
-            <li>
-              <a href="#">Карта штата</a>
+            <li class="main-navigation-right">
+              <a href="hotels.html">Гостиницы</a>
             </li>
-            <li>
-              <a href="#">Гостиницы</a>
+            <li class="main-navigation-right">
+              <a href="#">Карта штата</a>
             </li>
           </ul>
         </nav>
       </header>
       <main>
         <section class="intro">
-          <img src="img/index/intro-text.png" width="458" height="352" alt="Добро пожаловать в Седону!">
+          <img class="intro-text" src="img/index/intro-text.png" width="458" height="352" alt="Добро пожаловать в Седону!">
         </section>
         <section class="content">
           <div class="reason-title">
@@ -38,7 +40,7 @@
             <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           </div>
           <div class="reason-row clearfix">
-            <div class="reason-row-descr left">
+            <div class="reason-row-descr">
               <h2>Настоящий городок</h2>
               <p>
                 &mdash; №1 &mdash;
@@ -47,26 +49,29 @@
                 Седона - не аттракцион для туристов, там течет своя жизнь
               </p>
             </div>
-            <div class="reason1 right">
+            <div class="reason1">
             </div>
           </div>
           <div class="recommend clearfix">
-            <div class="recommend-item left">
-              <img src="http://placehold.it/150x100" width="150" height="100" alt="Жилье">
+            <div class="recommend-item">
+              <div class="recommend-icon recommend-house">
+              </div>
               <h2>Жилье</h2>
               <p>
                 Рекомендуем пожить в настоящем мотеле, все как в кино!
               </p>
             </div>
-            <div class="recommend-item left">
-              <img src="http://placehold.it/150x100" width="150" height="100" alt="Еда">
+            <div class="recommend-item">
+              <div class="recommend-icon recommend-food">
+              </div>
               <h2>Еда</h2>
               <p>
                 Всегда заказывайте фирменный бургер, вы не разочаруетесь!
               </p>
             </div>
-            <div class="recommend-item right">
-              <img src="http://placehold.it/150x100" width="150" height="100" alt="Сувениры">
+            <div class="recommend-item">
+              <div class="recommend-icon recommend-souvenir">
+              </div>
               <h2>Сувениры</h2>
               <p>
                 Не только китайского, но и местного произоводства!
@@ -74,9 +79,9 @@
             </div>
           </div>
           <div class="reason-row clearfix">
-            <div class="reason2 left">
+            <div class="reason2">
             </div>
-            <div class="reason-row-descr right">
+            <div class="reason-row-descr">
               <h2>Там есть мост дьявола</h2>
               <p>
                 &mdash; №2 &mdash;
@@ -87,7 +92,7 @@
             </div>
           </div>
           <div class="reason clearfix">
-            <div class="reason-item left">
+            <div class="reason-item">
               <h2>Небольшая площадь</h2>
               <p>
                 &mdash; №3 &mdash;
@@ -96,7 +101,7 @@
                 Все достопримечательности находятся очень близко
               </p>
             </div>
-            <div class="reason-item left">
+            <div class="reason-item">
               <h2>Красивая дорога</h2>
               <p>
                 &mdash; №4 &mdash;
@@ -105,7 +110,7 @@
                 Ехать в Седону из Лас-Вегаса совсем не скучно!
               </p>
             </div>
-            <div class="reason-item right">
+            <div class="reason-item">
               <h2>Мало туристов</h2>
               <p>
                 &mdash; №5 &mdash;
@@ -122,46 +127,60 @@
             <p>
               Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
             </p>
-            <div class="search-form-title">
-              <button class="search-btn" type="submit">Поиск гостиницы в Седоне</button>
-            </div>
           </div>
-          <div class="search-form">
-            <form action="#" method="get">
-              <label>
-                Дата заезда:
-                <input type="date" name="arrival" value="2017-04-24">
-              </label>
-              <label>
-                Дата выезда:
-                <input type="date" name="departure" value="2017-07-04">
-              </label>
-              <label>
-                Взрослые:
-                <input type="number" name="adult" min="1" value="2">
-              </label>
-              <label>
-                Дети:
-                <input type="number" name="children" min="0" value="0">
-              </label>
-              <button type="submit">Найти</button>
+          <div class="search-field">
+            <button class="btn btn-brown search-btn" type="button">Поиск гостиницы в Седоне</button>
+            <form class="search-form" action="#" method="get">
+              <div class="search-wrapper">
+                <label for="arrival">Дата заезда:</label>
+                <div class="search-date">
+                  <input type="text" id="arrival" name="arrival" value="24 апреля 2017">
+                  <button class="btn icon-calendar" type="button"></button>
+                </div>
+              </div>
+              <div class="search-wrapper">
+                <label for="departure">Дата выезда:</label>
+                <div class="search-date">
+                  <input type="text" id="departure" name="departure" value="4 июля 2017">
+                  <button class="btn icon-calendar" type="button"></button>
+                </div>
+              </div>
+              <div class="search-wrapper">
+                <label for="adult">Взрослые:</label>
+                <div class="search-number">
+                  <input type="text" id="adult" name="adult" min="1" value="2">
+                  <button class="btn icon-minus" type="button"></button>
+                  <button class="btn icon-plus" type="button"></button>
+                </div>
+                <label class="number-children" for="children">Дети:</label>
+                <div class="search-number">
+                  <input type="text" id="children" name="children" min="0" value="0">
+                  <button class="btn icon-minus" type="button"></button>
+                  <button class="btn icon-plus" type="button"></button>
+                </div>
+              </div>
+              <button class="btn btn-blue btn-find" type="submit">Найти</button>
             </form>
+          </div>
+          <div class="search-map">
           </div>
         </section>
       </main>
-      <footer class="main-footer clearfix transparency">
-        <section class="footer-visitsedona left">
+      <footer class="main-footer footer-index">
+        <div class="footer-visitsedona">
           <a href="#">#visitsedona</a>
-        </section>
-        <section class="footer-social left">
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        </div>
+        <div class="footer-social">
           <a class="social-btn social-btn-tw" href="#">Твиттер</a>
+          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
           <a class="social-btn social-btn-yt" href="#">Ютуб</a>
-        </section>
-        <section class="footer-copyright right">
-          <p>Website by</p>
-          <a class="btn" href="https://htmlacademy.ru">html academy</a>
-        </section>
+        </div>
+        <div class="footer-copyright">
+          <p>
+            Website by
+            <a href="https://htmlacademy.ru">html academy</a>
+          </p>
+        </div>
       </footer>
     </div>
   </body>
