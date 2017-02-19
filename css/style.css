@@ -372,6 +372,7 @@ h2 {
 }
 
 .search-form input {
+  height: 38px; /*для IE*/
   padding: 6px 13px;
   background: #f2f2f2;
 }
@@ -382,7 +383,7 @@ h2 {
 
 .search-form input:active,
 .search-form input:focus {
-  padding: 4px 12px;
+  padding: 4px 11px;
   background: #ffffff;
   border: 2px solid #e5e5e5;
   outline-color: #e5e5e5;
@@ -422,18 +423,18 @@ h2 {
 
 .icon-minus {
   position: absolute;
-  top: 13px;
-  left: 13px;
-  width: 12px;
-  height: 12px;
+  top: 5px;
+  left: 5px;
+  width: 28px;
+  height: 28px;
   background: transparent;
 }
 
 .icon-minus::before {
   content: "";
   position: absolute;
-  top: 4.5px;
-  left: 0;
+  top: 12.5px;
+  left: 8px;
   width: 12px;
   height: 3px;
   background: #a9a9a9;
@@ -450,10 +451,10 @@ h2 {
 
 .icon-plus {
   position: absolute;
-  top: 13px;
-  right: 13px;
-  width: 12px;
-  height: 12px;
+  top: 5px;
+  right: 5px;
+  width: 28px;
+  height: 28px;
   background: transparent;
 }
 
@@ -461,8 +462,8 @@ h2 {
 .icon-plus::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 4.5px;
+  top: 8px;
+  left: 12.5px;
   width: 3px;
   height: 12px;
   background: #a9a9a9;
@@ -494,7 +495,7 @@ h2 {
 
 .search-map {
   min-height: 593px;
-  background: #eeeeee url("../img/index/map.png") no-repeat top;
+  background: #eeeeee url("../img/index/map.jpg") no-repeat top;
 }
 
 .filter {
